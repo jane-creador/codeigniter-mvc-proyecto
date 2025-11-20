@@ -4,6 +4,10 @@
   <div class="alert alert-info"><?= esc($message) ?></div>
 <?php endif; ?>
 
+<?php if ($error = session()->getFlashdata('error')): ?>
+  <div class="alert alert-danger"><?= esc($error) ?></div>
+<?php endif; ?>
+
 <h1 class="mb-3">Subir imagen</h1>
 <form method="post" enctype="multipart/form-data" action="<?= site_url('images/upload') ?>">
   <?= csrf_field() ?>
