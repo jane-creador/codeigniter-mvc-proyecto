@@ -20,3 +20,8 @@ $routes->get('publication', 'Publication::index');
 $routes->post('publication/add', 'Publication::add');
 $routes->match(['get','post'], 'publication/edit/(:num)', 'Publication::edit/$1');
 $routes->get('publication/delete/(:num)', 'Publication::delete/$1');
+
+$routes->get('images', 'ImageController::list');
+$routes->get('images/upload', 'ImageController::upload');
+$routes->post('images/upload', 'ImageController::upload');
+$routes->get('images/delete/(:any)', 'ImageController::delete/$1');
