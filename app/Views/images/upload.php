@@ -5,7 +5,7 @@
 <?php endif; ?>
 
 <h1 class="mb-3">Subir imagen</h1>
-<form method="post" enctype="multipart/form-data" action="http://localhost:8080/index.php/images/upload">
+<form method="post" enctype="multipart/form-data" action="<?= base_url('images/upload') ?>">
 <?= csrf_field() ?>
   <div class="mb-3">
     <label for="file" class="form-label">Selecciona un archivo</label>
