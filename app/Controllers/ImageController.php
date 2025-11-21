@@ -22,10 +22,12 @@ class ImageController extends BaseController
             $fileName = $file->getRandomName();
             $file->move($uploadPath, $fileName);
 
-            return redirect()->to('/images')->with('message', 'Imagen subida correctamente.');
+            return redirect()->to('/images')
+                             ->with('message', 'Imagen subida correctamente.');
         }
 
-        return redirect()->back()->with('error', 'No se seleccionó ningún archivo.');
+        // Sin mensaje de error
+        return redirect()->back();
     }
 
     public function list()

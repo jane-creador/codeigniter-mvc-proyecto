@@ -1,9 +1,10 @@
 <?php
 
 use CodeIgniter\Router\RouteCollection;
+use App\Controllers\ImageController;
 
 /** @var RouteCollection $routes */
-$routes->setAutoRoute(true);
+$routes->setAutoRoute(false);
 
 $routes->get('/', 'User::index');
 $routes->get('user', 'User::index');

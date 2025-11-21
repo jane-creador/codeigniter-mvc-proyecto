@@ -1,3 +1,0 @@
-# Preserve the uploads directory while ignoring uploaded files
-*
-!.gitignore

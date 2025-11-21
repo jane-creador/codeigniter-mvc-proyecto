@@ -4,13 +4,9 @@
   <div class="alert alert-info"><?= esc($message) ?></div>
 <?php endif; ?>
 
-<?php if ($error = session()->getFlashdata('error')): ?>
-  <div class="alert alert-danger"><?= esc($error) ?></div>
-<?php endif; ?>
-
 <h1 class="mb-3">Subir imagen</h1>
-<form method="post" enctype="multipart/form-data" action="<?= site_url('images/upload') ?>">
-  <?= csrf_field() ?>
+<form method="post" enctype="multipart/form-data" action="http://localhost:8080/index.php/images/upload">
+<?= csrf_field() ?>
   <div class="mb-3">
     <label for="file" class="form-label">Selecciona un archivo</label>
     <input type="file" name="file" id="file" class="form-control">
